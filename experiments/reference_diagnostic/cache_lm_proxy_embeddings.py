@@ -1,12 +1,3 @@
-#!/usr/bin/env python3
-"""Cache lightweight LM proxy embeddings for task/reference diagnostic selection.
-
-The preferred input to `select_reference_traces.py` is a pair of task/reference
-gradient embeddings. When exact per-example gradients are too expensive, this
-script provides a practical proxy: mean final-layer hidden states over response
-tokens, optionally weighted by per-token loss.
-"""
-
 from __future__ import annotations
 
 import argparse

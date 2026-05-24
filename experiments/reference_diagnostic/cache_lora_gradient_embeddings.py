@@ -1,13 +1,3 @@
-#!/usr/bin/env python3
-"""Cache LoRA-gradient embeddings for task/reference diagnostic selection.
-
-Unlike `cache_lm_proxy_embeddings.py`, this script represents each example by
-the gradient of its response-token SFT loss with respect to LoRA parameters.
-The high-dimensional gradient is compressed with deterministic feature hashing,
-which keeps the diagnostic lightweight while preserving update-direction
-information.
-"""
-
 from __future__ import annotations
 
 import argparse

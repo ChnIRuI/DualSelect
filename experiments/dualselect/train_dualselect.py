@@ -1,19 +1,3 @@
-#!/usr/bin/env python3
-"""Train LoRA adapters with DualSelect.
-
-This is a faithful, runnable implementation of the paper algorithm:
-
-1. Run a short task-only warm-up to obtain an initial task direction.
-2. Once per epoch, lazily refresh task-conditioned safe-response references.
-3. For each task mini-batch, select/reweight low-loss task examples compatible
-   with the selected reference direction.
-4. Apply the corrected update direction `g_task + eta * g_ref`.
-
-The implementation is intentionally explicit rather than deeply tied to SEAL's
-DeepSpeed trainer. It only updates PEFT/LoRA parameters, which makes
-per-example gradient scoring tractable.
-"""
-
 from __future__ import annotations
 
 import argparse

@@ -1,15 +1,3 @@
-#!/usr/bin/env python3
-"""Generate held-out probe KL reductions for the motivating diagnostic.
-
-For each fixed REDORCA batch, this script compares:
-
-1. task-only K-step rollout, which induces safety-probe KL drift;
-2. task+selected-reference K-step rollout for each reference-selection strategy.
-
-The output JSONL can be consumed by `run_reference_diagnostic.py` as
-`--probe-results`.
-"""
-
 from __future__ import annotations
 
 import argparse

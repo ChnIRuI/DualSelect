@@ -1,16 +1,3 @@
-#!/usr/bin/env python3
-"""Prepare REDORCA/HH-RLHF resources for the motivating diagnostic.
-
-The diagnostic in the paper uses three disjoint resources:
-
-1. Fixed REDORCA mini-batches to induce task-update directions.
-2. Anthropic HH-RLHF train-split chosen responses as safe-response references.
-3. A separate safety probe set for rollout evaluation.
-
-This script materializes those resources as local JSONL/metadata files. It does
-not train a model or compute embeddings.
-"""
-
 from __future__ import annotations
 
 import argparse

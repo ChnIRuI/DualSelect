@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-"""Prepare lightweight metadata for the reference-conditioning diagnostic."""
-
 from __future__ import annotations
 
 import argparse

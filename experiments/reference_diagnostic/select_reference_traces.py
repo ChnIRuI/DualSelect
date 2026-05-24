@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-"""Create task-conditioned safety-reference selection traces from cached embeddings."""
-
 from __future__ import annotations
 
 import argparse

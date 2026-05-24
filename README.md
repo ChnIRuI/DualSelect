@@ -28,20 +28,7 @@ The current public release implements a practical workflow:
 pip install -r requirements.txt
 ```
 
-### 2. Prepare diagnostic resources
-
-Before running the scripts, replace each `...` placeholder with your local dataset path.
-
-```bash
-REDORCA=.../RedOrca/train.jsonl \
-bash sh/prepare_motivating_resources.sh
-```
-
-This will generate task batches, reference pools, probe data, and metadata under:
-
-- `outputs/motivating_diagnostic/resources/`
-
-### 3. Cache update-direction embeddings
+### 2. Cache update-direction embeddings
 
 Use LoRA-gradient embeddings for the main diagnostic:
 
@@ -57,19 +44,13 @@ MODEL=meta-llama/Meta-Llama-3-8B-Instruct \
 bash sh/cache_lm_proxy_embeddings.sh
 ```
 
-### 4. Select references and run the diagnostic
+### 3. Select references
 
 ```bash
 bash sh/select_reference_traces_lora_grad.sh
-bash sh/run_reference_diagnostic.sh
 ```
 
-The diagnostic writes tables and figures to:
-
-- `outputs/motivating_diagnostic/tables/`
-- `figs/reference_diagnostic.pdf`
-
-### 5. Run DualSelect fine-tuning
+### 4. Run DualSelect fine-tuning
 
 Before training, replace `MODEL` and `TASK_DATA` with your local model and dataset paths.
 
