@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.venv/
+venv/
+outputs/
+figs/
+wandb/
+*.log
+*.npy
+*.npz
+*.pt
+*.pth
+*.safetensors
+*.jsonl
