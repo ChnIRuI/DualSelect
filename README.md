@@ -19,6 +19,9 @@ The released code supports:
 
 ![DualSelect Framework](resource/dualselect.png)
 
+## 🎉 News
+* Our paper has been accepted to **EMNLP 2026**!
+
 
 ## 🚀 Quick Start
 
